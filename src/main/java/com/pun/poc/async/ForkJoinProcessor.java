@@ -51,7 +51,9 @@ public class ForkJoinProcessor {
         for(Integer i:numList) {
             computedResult.add(i*2);
         }
+        int sum = computedResult.stream().mapToInt(i->i.intValue()).sum();
         //LOG.info("original list {}\nnew list {}", numList, computedResult);
+        LOG.info("computed sum list {}", sum);
     }
 
 }
