@@ -5,10 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class PocApplication {
-	public static void main(String[] args) {
-
+	public static           void main(String[] args) {
+		//for testing mergetool
 		SpringApplication.run(PocApplication.class, args);
 
-		//above comment is removed
+		//above comment i//s removed
+		//this comment is
 	}
 }
