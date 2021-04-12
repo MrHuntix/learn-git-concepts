@@ -27,23 +27,24 @@ public class ForkJoinProcessor {
         LOG.info("calling process");
         numList = new ArrayList<>(numItems);
         for(int i=0;i<numItems;i++) {
+            //some comment to pretend logic
             numList.add(i);
         }
         LOG.info("list initialised");
         long start = System.currentTimeMillis();
         processNormal();
 
-        LOG.info("sync processed {} in {} sec", numItems, (System.currentTimeMillis()-start));
+        LOG.info("sync processed {} in {} ms", numItems, (System.currentTimeMillis()-start));
 
         start = System.currentTimeMillis();
         process();
-        LOG.info("async processed {} in {} sec", numItems, (System.currentTimeMillis()-start));
+        LOG.info("async processed {} in {} ms", numItems, (System.currentTimeMillis()-start));
     }
 
     public void process() {
         DoubleTask task = new DoubleTask(numList, numLimit);
         List<Integer> res = task.invoke();
-        //LOG.info("original list {}\nnew list {}", numList, res);
+        LOG.info("computed async result size {}", res.size());
     }
 
     public void processNormal() {
@@ -51,7 +52,7 @@ public class ForkJoinProcessor {
         for(Integer i:numList) {
             computedResult.add(i*2);
         }
-        //LOG.info("original list {}\nnew list {}", numList, computedResult);
+        LOG.info("computed sync result size {}", computedResult.size());
     }
 
 }
