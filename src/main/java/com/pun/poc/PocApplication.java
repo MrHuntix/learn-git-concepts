@@ -9,7 +9,7 @@ public class PocApplication {
 
 
 
-		SpringApplication.           run(PocApplication.class, args);
+		SpringApplication.run(PocApplication.class, args);
 
 		//this comment,this change is from branch one is added from branch two
 		            //this is to test pull, allo
