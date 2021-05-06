@@ -8,6 +8,7 @@ public class PocApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PocApplication.class, args);
 		//This is commit dos
-		//This is a commit 1
+		//This is a commit 1, changes part of commit 2
+		//this is a commit 2
 	}
 }
