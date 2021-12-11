@@ -1,5 +1,6 @@
 package com.pun.poc;
 
+import com.pun.poc.models.CommitOne;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,6 +15,6 @@ public class PocApplication {
 		//changes added to branch three
 
 		//This is part of commit one
-
+		CommitOne one = new CommitOne();
 	}
 }
