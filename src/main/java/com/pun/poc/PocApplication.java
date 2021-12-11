@@ -13,5 +13,7 @@ public class PocApplication {
 
 		//changes added to branch three
 
+		//This is part of commit one
+
 	}
 }
